@@ -2,7 +2,7 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Gain Ladder Demonstration for PIC18F16Q41
-The operational amplifier (OPA) module in the PIC18F16Q41 comes with an internal resistor ladder that can be used to set different gains internally. This code example shows an alternative mode of operation where the ladder is instead used to create static DC levels.
+The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes with an internal resistor ladder that can be used to set different gains internally. This code example shows an alternative mode of operation where the ladder is instead used to create static DC levels.
 
 ## Related Documentation
 <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a>
