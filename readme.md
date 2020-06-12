@@ -13,7 +13,7 @@ The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes 
 - <a href="https://www.microchip.com/wwwproducts/en/PIC18F16Q41">PIC18F16Q41 Product Information</a>
 - <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137"> Microchip Curiosity Development Board (DM164137) </a>
 
-## Setup
+## Pin Table
 | Pin | Function
 | --- | --------
 | RC2 | Output of the OPA module
