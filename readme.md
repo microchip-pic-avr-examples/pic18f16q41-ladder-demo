@@ -19,7 +19,7 @@ The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes 
 | RC2 | Output of the OPA module
 
 ## Operation<br>
-The internal resistor ladder of the OPA module is normally used to provide feedback for the operational amplifier. For this code example, the internal resistor ladder is demonstrated by generated a voltage level based on the ratio of resistors internally. The output of the operational amplifier is related to the resistor divider network created between Vdd and Vss, as shown below. GSEL (gain select) is the internal name for the resistor ladder.
+The internal resistor ladder of the OPA module is normally used to provide feedback for the operational amplifier. In this code example, the internal resistor ladder is used to generate a voltage level based on the internal resistor ladder. The output of the operational amplifier is proportional to the resistor divider network created between Vdd and Vss, as shown below. GSEL (gain select) is the internal name for the resistor ladder.
 
 <img src="images/schematic.png" width="500"><br>
 *Internal Connections*
@@ -39,7 +39,7 @@ The table below (reproduced from the device datasheet) contains the ratios of th
 
 *Expected Outputs in the Gain Ladder*
 
-To demonstrate the full range of outputs, the code example generates a free-running sawtooth waveform (shown below) that reaches each of the output steps listed above.<br>
+To demonstrate the full range of outputs, the code example generates a free-running sawtooth waveform (shown below) that contains all of the output steps listed above.<br>
 
 <img src="images/gainLevelDemo.PNG" alt="Gain Waveform" width="500px"/><br>
 *Gain Ladder Output*<br>
