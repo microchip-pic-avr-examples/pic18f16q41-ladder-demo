@@ -45,4 +45,4 @@ To demonstrate the full range of outputs, the code example generates a free-runn
 *Gain Ladder Output*<br>
 
 ## Summary
-This code example demonstrates the internal resistor ladder to generate various DC output levels. This can also be used to calculate the internal resistor ratios on the bench.
+This code example demonstrates the internal resistor ladder to generate various DC output levels. The output levels can also be used to calculate the internal resistor ratios on the bench.
