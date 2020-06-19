@@ -2,7 +2,7 @@
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # Gain Ladder Demonstration for PIC18F16Q41
-The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes with an internal resistor ladder that can be used to set different gains internally. This code example demonstrates how to use the internal resistor ladder to generate varying DC levels without the use of a DAC.
+The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes with an internal resistor ladder that can be used to set different gains internally. This code example demonstrates how to use the internal resistor ladder to generate various DC levels without the use of a DAC.
 
 ## Software Used
 * <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
@@ -45,4 +45,4 @@ To demonstrate the full range of outputs, the code example generates a free-runn
 *Gain Ladder Output*<br>
 
 ## Summary
-This code example demonstrates the internal resistor ladder to generate constant output voltages. The ladder can be used to generate DC levels or to calculate the internal resistor ratios on the bench.
+This code example demonstrates the internal resistor ladder to generate various DC output levels. This can also be used to calculate the internal resistor ratios on the bench.
