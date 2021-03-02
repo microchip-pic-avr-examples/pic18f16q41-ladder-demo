@@ -4,23 +4,23 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f16q41-ladder-demo",
-        "version": "1.0.1",
+        "version": "2.0.0",
         "displayName": "Gain Ladder Demo on PIC18F16Q41",
         "projectName": "pic18f16q41-ladder-demo",
         "shortDescription": "PIC18F16Q41 - Demonstration of the Internal Gain Ladder",
         "ide": {
             "name": "MPLABX",
-            "semverRange": ">=5.40.0"
+            "semverRange": ">=5.45.0"
         },
         "compiler": [
 			{
 				"name": "XC8",
-				"semverRange": "^2.20.0"
+				"semverRange": "^2.31.0"
 			}
 		],
         "dfp": {
             "name": "PIC18F-Q_DFP",
-            "semverRange": "^1.5.124"
+            "semverRange": "^1.9.175"
         },
         "configurator": {
             "name": "MCC",
@@ -47,8 +47,8 @@
             "OPA"
         ],
         "keywords": [
-            "MCC",
-            "Intelligent Analog"
+            "Op Amp",
+            "Resistor ladder"
         ],
 		"additionalData": {
 			"longDescription": {

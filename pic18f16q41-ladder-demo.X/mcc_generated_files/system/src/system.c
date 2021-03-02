@@ -1,3 +1,24 @@
+/**
+  @Generated CCL Source File
+
+  @Company:
+    Microchip Technology Inc.
+
+  @File Name:
+    system.c
+
+  @Summary:
+    This is the system.c file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    Generation Information :
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.31
+        MPLAB             :  MPLAB X 5.45
+*/
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -7,7 +28,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
     obligations.
-
+    
     MICROCHIP SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT 
     WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT 
     LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT 
@@ -17,7 +38,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     THEORY FOR ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT 
     LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, 
     OR OTHER SIMILAR COSTS. 
-
+    
     To the fullest extend allowed by law, Microchip and its licensors 
     liability will not exceed the amount of fees, if any, that you paid 
     directly to Microchip to use this software. 
@@ -31,60 +52,17 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-//Set the resistor ladder
-#define SetResistorLadder(X) OPA1CON1bits.GSEL = ratioValue
+ /**
+   Section: Included Files
+ */
+#include "../system.h"
 
-void initOPAMP()
+
+void SYSTEM_Initialize(void)
 {
-    OPA1CON0 = 0x00;
-    OPA1CON1 = 0x00;
-    OPA1CON2 = 0x00;
-    OPA1CON3 = 0x00;
-    
-    //EN = 0, CPON = 1, UG = 1, SOC = 00
-    OPA1CON0 = 0x48;
-    
-    //GSEL = 000, RESON = 1, NSS = 111
-    OPA1CON1 = 0x0F;
-    
-    //PCH = 001, NCH = 000
-    OPA1CON2 = 0x01;
-    
-    //FMS = 01, PSS = 000
-    OPA1CON3 = 0x40;
-    
-    OPA1CON0bits.EN = 1;
+    CLOCK_Initialize();
+    INTERRUPT_Initialize();
+    PIN_MANAGER_Initialize();
 }
 
-int main(void)
-{
-    // Initialize the device
-    SYSTEM_Initialize();
-    
-    // Init the OPAMP
-    initOPAMP();
-    
-    uint8_t ratioValue = 0;
-        
-    while (1)
-    {
-        //The code below takes ~60us to execute - only delay for 40
-        __delay_us(40);
-        
-        // Change the output
-        SetResistorLadder(ratioValue);
-        
-        // Increment to the next ratio
-        ratioValue++;
-        
-        //Valid range is 0 to 7 for GSEL
-        if (ratioValue >= 8)
-            ratioValue = 0x0;
-    }
-    return 0;
-}
-/**
- End of File
-*/

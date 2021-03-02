@@ -1,3 +1,24 @@
+/**
+  @Generated CLOCK CONTROL Source File
+
+  @Company:
+    Microchip Technology Inc.
+
+  @File Name:
+    clock.c
+
+  @Summary:
+    This is the clock.c file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    Generation Information :
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
+*/
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -7,7 +28,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
     obligations.
-
+    
     MICROCHIP SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT 
     WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT 
     LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT 
@@ -17,7 +38,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     THEORY FOR ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT 
     LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, 
     OR OTHER SIMILAR COSTS. 
-
+    
     To the fullest extend allowed by law, Microchip and its licensors 
     liability will not exceed the amount of fees, if any, that you paid 
     directly to Microchip to use this software. 
@@ -31,59 +52,29 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-//Set the resistor ladder
-#define SetResistorLadder(X) OPA1CON1bits.GSEL = ratioValue
+#include <xc.h>
+#include "../clock.h"
 
-void initOPAMP()
+void CLOCK_Initialize(void)
 {
-    OPA1CON0 = 0x00;
-    OPA1CON1 = 0x00;
-    OPA1CON2 = 0x00;
-    OPA1CON3 = 0x00;
-    
-    //EN = 0, CPON = 1, UG = 1, SOC = 00
-    OPA1CON0 = 0x48;
-    
-    //GSEL = 000, RESON = 1, NSS = 111
-    OPA1CON1 = 0x0F;
-    
-    //PCH = 001, NCH = 000
-    OPA1CON2 = 0x01;
-    
-    //FMS = 01, PSS = 000
-    OPA1CON3 = 0x40;
-    
-    OPA1CON0bits.EN = 1;
-}
-
-int main(void)
-{
-    // Initialize the device
-    SYSTEM_Initialize();
-    
-    // Init the OPAMP
-    initOPAMP();
-    
-    uint8_t ratioValue = 0;
-        
-    while (1)
-    {
-        //The code below takes ~60us to execute - only delay for 40
-        __delay_us(40);
-        
-        // Change the output
-        SetResistorLadder(ratioValue);
-        
-        // Increment to the next ratio
-        ratioValue++;
-        
-        //Valid range is 0 to 7 for GSEL
-        if (ratioValue >= 8)
-            ratioValue = 0x0;
-    }
-    return 0;
+    // Set the CLOCK CONTROL module to the options selected in the user interface.
+    // NDIV 4; NOSC HFINTOSC; 
+    OSCCON1 = 0x62;
+    // 
+    OSCCON2 = 0x70;
+    // SOSCPWR Low power; CSWHOLD may proceed; 
+    OSCCON3 = 0x0;
+    // EXTOEN disabled; HFOEN disabled; MFOEN disabled; LFOEN disabled; SOSCEN disabled; ADOEN disabled; 
+    OSCEN = 0x0;
+    // HFFRQ 4_MHz; 
+    OSCFRQ = 0x2;
+    // 
+    OSCSTAT = 0x0;
+    // TUN undefined; 
+    OSCTUNE = 0x0;
+    // ACTEN disabled; ACTUD enabled; 
+    ACTCON = 0x0;
 }
 /**
  End of File

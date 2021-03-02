@@ -10,7 +10,7 @@ The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes 
 [Code Example: AVR128DB48 Using the Internal Opamp as Regulated Power Supply for MVIO (Studio)](https://github.com/microchip-pic-avr-examples/avr128db48-using-opamp-as-a-regulated-power-supply)  
 
 ## Software Used
-* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® IDE 5.40 or newer</a>
+* <a href="http://www.microchip.com/mplab/mplab-x-ide">MPLAB® X IDE 5.40 or newer</a>
 * <a href="https://www.microchip.com/mplab/compilers">Microchip XC8 Compiler 2.20 or newer</a>
 * <a href="https://www.microchip.com/mplab/mplab-code-configurator">MPLAB® Code Configurator (MCC) 3.95.0 or newer</a>
 
