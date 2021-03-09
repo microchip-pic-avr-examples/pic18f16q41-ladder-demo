@@ -36,6 +36,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
 //Set the resistor ladder
 #define SetResistorLadder(X) OPA1CON1bits.GSEL = ratioValue
 
+//Init the OPAMP
 void initOPAMP()
 {
     OPA1CON0 = 0x00;
@@ -60,7 +61,6 @@ void initOPAMP()
 
 int main(void)
 {
-    // Initialize the device
     SYSTEM_Initialize();
     
     // Init the OPAMP
@@ -85,6 +85,3 @@ int main(void)
     }
     return 0;
 }
-/**
- End of File
-*/

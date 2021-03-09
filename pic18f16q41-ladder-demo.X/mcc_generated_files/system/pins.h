@@ -62,6 +62,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set RC2 aliases
+#define OPAMP_OUT_TRIS                 TRISCbits.TRISC2
+#define OPAMP_OUT_LAT                  LATCbits.LATC2
+#define OPAMP_OUT_PORT                 PORTCbits.RC2
+#define OPAMP_OUT_WPU                  WPUCbits.WPUC2
+#define OPAMP_OUT_OD                   ODCONCbits.ODCC2
+#define OPAMP_OUT_ANS                  ANSELCbits.ANSELC2
+#define OPAMP_OUT_SetHigh()            do { LATCbits.LATC2 = 1; } while(0)
+#define OPAMP_OUT_SetLow()             do { LATCbits.LATC2 = 0; } while(0)
+#define OPAMP_OUT_Toggle()             do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0)
+#define OPAMP_OUT_GetValue()           PORTCbits.RC2
+#define OPAMP_OUT_SetDigitalInput()    do { TRISCbits.TRISC2 = 1; } while(0)
+#define OPAMP_OUT_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
+#define OPAMP_OUT_SetPullup()          do { WPUCbits.WPUC2 = 1; } while(0)
+#define OPAMP_OUT_ResetPullup()        do { WPUCbits.WPUC2 = 0; } while(0)
+#define OPAMP_OUT_SetPushPull()        do { ODCONCbits.ODCC2 = 0; } while(0)
+#define OPAMP_OUT_SetOpenDrain()       do { ODCONCbits.ODCC2 = 1; } while(0)
+#define OPAMP_OUT_SetAnalogMode()      do { ANSELCbits.ANSELC2 = 1; } while(0)
+#define OPAMP_OUT_SetDigitalMode()     do { ANSELCbits.ANSELC2 = 0; } while(0)
+
 /**
    @Param
     none
