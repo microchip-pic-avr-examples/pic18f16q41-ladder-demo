@@ -9,7 +9,7 @@
         "projectName": "pic18f16q41-ladder-demo",
         "shortDescription": "PIC18F16Q41 - Demonstration of the Internal Gain Ladder",
         "ide": {
-            "name": "MPLABX",
+            "name": "MPLAB X",
             "semverRange": ">=5.45.0"
         },
         "compiler": [
