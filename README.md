@@ -10,14 +10,14 @@ The operational amplifier (OPA) module on the PIC18-Q41 family of devices comes 
 [Code Example: AVR128DB48 Using the Internal Opamp as Regulated Power Supply for MVIO (Studio)](https://github.com/microchip-pic-avr-examples/avr128db48-using-opamp-as-a-regulated-power-supply)  
 
 ## Software Used  
-* [MPLAB® X IDE v5.45 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_getting_started_opamp_github)
-* [Microchip XC8 Compiler v2.31 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_getting_started_opamp_github)
-* [MPLAB® Code Configurator (MCC) v4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_getting_started_opamp_github)
+* [MPLAB® X IDE v5.45 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_ladder_demo_github)
+* [Microchip XC8 Compiler v2.31 or newer](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xc-compilers?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_ladder_demo_github)
+* [MPLAB® Code Configurator (MCC) v4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_ladder_demo_github)
 * [PIC18F-Q DFP v1.9.175 or newer](https://packs.download.microchip.com/)  
 
 ## Hardware Used
-- [PIC18F16Q41](https://www.microchip.com/wwwproducts/en/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_getting_started_opamp_github)
-- [Microchip Curiosity Development Board (DM164137) - Rev 4](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_getting_started_opamp_github)
+- [PIC18F16Q41](https://www.microchip.com/wwwproducts/en/PIC18F16Q41?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_ladder_demo_github)
+- [Microchip Curiosity Development Board (DM164137) - Rev 4](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164137?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18q41_ladder_demo_github)
 
 ## Pin Table
 | Pin | Function
