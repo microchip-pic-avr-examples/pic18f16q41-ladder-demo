@@ -1,14 +1,14 @@
-/*
- * MAIN Generated Driver File
- * 
- * @file main.c
- * 
- * @defgroup main MAIN
- * 
- * @brief This is the generated driver implementation file for the MAIN driver.
+/** 
+ * TMR Generated Driver API Header File
  *
- * @version MAIN Driver Version 1.0.0
-*/
+ * @file timer_interface.h
+ *  
+ * @defgroup timer_interface Timer interface
+ *
+ * @brief This header file provides interfaces to Timer APIs.
+ *
+ * @version TMR_interface Version 1.0.1
+ */
 
 /*
 © [2022] Microchip Technology Inc. and its subsidiaries.
@@ -30,48 +30,33 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
 
-void moveResistorLadder(void)
-{
-    static volatile uint8_t ladderGain = 0;
-    
-    //Update the Resistor Ladder
-    OPA1_SetResistorLadder(ladderGain);
-    
-    //Increment to the next ladder
-    ladderGain++;
-    
-    //If we passed the last ladder step...
-    if (ladderGain >= 8)
-    {
-        ladderGain = 0;
-    }
-    
-    LED0_Toggle();
-}
+#ifndef TMR_INTERFACE_H
+#define TMR_INTERFACE_H
 
-int main(void)
+/**
+ * @brief This file contains API prototypes and other data types for Timer interface.
+ * @{
+ */
+ 
+ #include<stddef.h>
+        
+/**
+ @ingroup timer_interface
+ @struct TMR_INTERFACE
+ @brief This structure contains the interfaces to Timer module
+ */
+ 
+struct TMR_INTERFACE
 {
-    SYSTEM_Initialize();
-        
-    //Activate Unity Gain
-    OPA1_EnableSoftwareUnityGain();
-    
-    //Configure callback function
-    Timer2_OverflowCallbackRegister(&moveResistorLadder);
-    
-    //Enable Interrupts
-    INTERRUPT_GlobalInterruptEnable();
-    
-    //Start the Timer
-    Timer2_Start();
-    
-    uint8_t ratioValue = 0;
-        
-    while (1)
-    {
-        
-    }
-    return 0;
-}
+    void (*Initialize)(void);
+    void (*Start)(void);
+    void (*Stop)(void);
+    void (*PeriodCountSet)(size_t count);
+    void (*TimeoutCallbackRegister)(void (* CallbackHandler)(void));
+    void (*Tasks)(void);
+};
+/**
+ * @}
+ */
+#endif //TMR_INTERFACE_H
