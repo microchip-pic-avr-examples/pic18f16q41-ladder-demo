@@ -35,16 +35,16 @@ The internal resistor ladder of the OPA module is normally used to provide feedb
 
 The table below (reproduced from the device datasheet) contains the ratios of the internal resistors available in PIC18F16Q41.
 
-| Resistor Ratio   | Output %      | Ideal Output at Vdd = 5V
+| Resistor Ratio   | Output %      | Ideal Output at Vdd = 3.3V
 | ---------------- | ------------- | -------
-| 1/15             | 6.25%         | 312.5mV
-| 1/7              | 12.5%         | 625mV
-| 1/3              | 25%           | 1.25V
-| 1                | 50%           | 2.5V
-| 5/3              | 62.5%         | 3.125V
-| 3                | 75%           | 3.75V
-| 7                | 87.5%         | 4.375V
-| 15               | 93.75%        | 4.6875V
+| 1/15             | 6.25%         | 206.25mV
+| 1/7              | 12.5%         | 412.5mV
+| 1/3              | 25%           | 825mV
+| 1                | 50%           | 1.65V
+| 5/3              | 62.5%         | 2.0625V
+| 3                | 75%           | 2.475V
+| 7                | 87.5%         | 2.8875V
+| 15               | 93.75%        | 3.09375V
 
 *Expected Outputs in the Gain Ladder*
 
