@@ -16,7 +16,7 @@ The operational amplifier (OPA) module on the PIC18F16Q41 family of devices come
 
 ## Hardware Used
 
-**Note: Version 2.0.0 of this project switched to the Curiosity Nano. Previous versions used the Curiosity Development Board (DM164137).**
+**Note: Version 3.0.0 of this project switched to the Curiosity Nano. Previous versions used the Curiosity Development Board (DM164137).**
 
 * [PIC18F16Q41 Curiosity Nano Evaluation Kit (EV26Q64A)](https://www.microchip.com/en-us/development-tool/EV26Q64A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-ladder-demo-github)
 * [Curiosity Nano Adapter Board (AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_pic18q41&utm_content=pic18f16q41-ladder-demo-github)
