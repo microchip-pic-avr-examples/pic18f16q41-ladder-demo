@@ -11,7 +11,7 @@
  */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -75,8 +75,8 @@ void Timer2_Initialize(void){
      PIR3bits.TMR2IF = 0;
     // Enabling TMR2 interrupt.
      PIE3bits.TMR2IE = 1;
-    // TCKPS 1:128; TMRON on; TOUTPS 1:1; 
-    T2CON = 0xF0;
+    // TCKPS 1:128; TMRON off; TOUTPS 1:1; 
+    T2CON = 0x70;
 }
 
 void Timer2_ModeSet(Timer2_HLT_MODE mode)
